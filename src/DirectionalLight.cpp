@@ -14,6 +14,6 @@ void DirectionalLight::direction(
     // (from query to light) = -(from light to query) 
     d = -(this->d);
     // light source is always infinite distance away
-    max_t = std::numeric_limits<double>
+    max_t = std::numeric_limits<double>::infinity();
 }
 

@@ -47,10 +47,10 @@ Eigen::Vector3d blinn_phong_shading(
         if ( !shadow_intersect_obj || shadow_t > light_t ) {
 
             // Diffuse component
-            Eigen::Vector3d I_diff (kd * max(0.0, n.dot(light_dir)));
+            Eigen::Vector3d I_diff (kd * std::max(0.0, n.dot(light_dir)));
 
             // Specular component
-            Eigen::Vector3d h (light_dir + (-ray.direction)).normalized();
+            Eigen::Vector3d h = (light_dir + (-ray.direction)).normalized();
             auto cos_nh = std::max(0.0, n.dot(h));
             Eigen::Vector3d I_spec (ks * pow(cos_nh, phong_exp));
 
