@@ -7,6 +7,9 @@ if(UNIX)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 endif()
 
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 # Prepare the build environment
 option(USE_SOLUTION "Use solution"  OFF)
 # Add your project files
