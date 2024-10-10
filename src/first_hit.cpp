@@ -20,6 +20,7 @@ bool first_hit(
 {
     // Initialize t to infinite distance
     t = std::numeric_limits<double>::infinity();
+    bool hit_found = false;
 
     // Loop through all objects in the scene
     for (int idx = 0; idx < objects.size(); idx++)
@@ -38,9 +39,10 @@ bool first_hit(
             hit_id = idx;
             t = obj_t;
             n = obj_n;
+            hit_found = true;
         }
     }
 
     // Return true if a hit was found
-    return (t < std::numeric_limits<double>::infinity());
+    return hit_found;
 }
