@@ -27,9 +27,9 @@ At this stage, the images generated are simple and lack realistic lighting, whic
 
 <table>
   <tr>
-    <td><img src="image.png" alt="id.ppm" width="300"/></td>
-    <td><img src="image-1.png" alt="depth.ppm" width="300"/></td>
-    <td><img src="image-2.png" alt="normal.ppm" width="300"/></td>
+    <td><img src="images/readme/image.png" alt="id.ppm" width="300"/></td>
+    <td><img src="images/readme/image-1.png" alt="depth.ppm" width="300"/></td>
+    <td><img src="images/readme/image-2.png" alt="normal.ppm" width="300"/></td>
   </tr>
 </table>
 
@@ -53,17 +53,17 @@ The bulk of the ray tracing process is implemented in `src/raycolor.cpp`. This f
 ## Results
 The results of the ray tracing process are images that are more realistic and visually appealing.
 
-![sphere-and-plane.ppm](image-3.png) 
+![sphere-and-plane.ppm](images/readme/image-3.png) 
 
 `sphere-and-plane.ppm`
 
-![sphere-packing.ppm](image-4.png)
+![sphere-packing.ppm](images/readme/image-4.png)
 
  `sphere-packing.ppm`
 
-![bunny.ppm](image-5.png)
+![bunny.ppm](images/readme/image-5.png)
 
 `bunny.ppm`
 
 ## Notes
-![alt text](image-6.png)
+![alt text](images/readme/image-6.png)
