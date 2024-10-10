@@ -1,6 +1,6 @@
 # Computer Graphics – Ray Tracing
 
-**Source**: THis repository was created by @alecjacobson for an offering of csc317 Computer Graphics at the University of Toronto.
+**Source**: This repository was created by @alecjacobson for an offering of csc317 Computer Graphics at the University of Toronto.
 
 > The original repository can be found at:
 >
