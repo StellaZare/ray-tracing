@@ -25,13 +25,19 @@ int main(int argc, char * argv[])
     objects,
     lights);
 
-  int width =  640;
-  int height = 360;
-  std::vector<unsigned char> rgb_image(3*width*height);
-  // For each pixel (i,j)
-  for(unsigned i=0; i<height; ++i) 
-  {
-    for(unsigned j=0; j<width; ++j)
+    Camera camera;
+    std::vector<std::shared_ptr<Object>> objects;
+    // Read a camera and scene description from given .json file
+    read_json(argc <= 1 ? "../data/sphere-and-plane.json" : argv[1], camera, objects);
+
+    int width = 640;
+    int height = 360;
+    std::vector<unsigned char> id_image(3 * width * height);
+    std::vector<unsigned char> normal_image(3 * width * height);
+    std::vector<unsigned char> depth_image(1 * width * height);
+
+    // For each pixel (i,j)
+    for (unsigned i = 0; i < height; ++i)
     {
       // Set background color
       Eigen::Vector3d rgb(0,0,0);
