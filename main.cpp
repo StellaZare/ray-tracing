@@ -20,7 +20,7 @@ int main(int argc, char * argv[])
   std::vector< std::shared_ptr<Light> > lights;
   // Read a camera and scene description from given .json file
   read_json(
-    argc<=1?"../data/sphere-and-plane.json":argv[1],
+    argc<=1?"../data/sphere-packing.json":argv[1],
     camera,
     objects,
     lights);
@@ -41,7 +41,7 @@ int main(int argc, char * argv[])
       viewing_ray(camera,i,j,width,height,ray);
       
       // Shoot ray and collect color
-      raycolor(ray,1.0,objects,lights,0,rgb);
+      raycolor(ray,0.5,objects,lights,0,rgb);
 
       // Write double precision color into image
       auto clamp = [](double s){ return std::max(std::min(s,1.0),0.0);};
@@ -52,5 +52,5 @@ int main(int argc, char * argv[])
     }
   }
 
-  write_ppm("rgb.ppm",rgb_image,width,height,3);
+  write_ppm("sphere-packing.ppm",rgb_image,width,height,3);
 }
