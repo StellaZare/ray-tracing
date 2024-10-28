@@ -45,9 +45,5 @@ bool first_hit(
 
     // Return true if a hit was found
     return hit_found;
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> 01d02fc (cosmetic changes)
